@@ -31,3 +31,4 @@ Very dark blue: hsl(240, 100%, 5%)
 
 - Family: [Inter](https://fonts.google.com/specimen/Inter)
 - Weights: 400, 700, 800
+- font-family: 'Inter', sans-serif;

@@ -1,0 +1,42 @@
+:root {
+  --color-soft-orange: hsl(35, 77%, 62%);
+  --color-soft-red: hsl(5, 86%, 63%);
+  --color--off-white: hsl(36, 100%, 99%);
+  --color-grayish-blue: hsl(233, 8%, 79%);
+  --color-dark-grayish-blue: hsl(236, 13%, 42%);
+  --color-very-dar-blue: hsl(240, 100%, 5%);
+}
+body {
+  font-family: "Inter", sans-serif;
+  max-width: 1440px;
+  padding: 50px 100px;
+  margin: 0 auto;
+  background-color: var(--color--off-white);
+}
+/* NAVIGATION */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+.nav-link > a {
+  text-decoration: none;
+  color: var(--color-dar-grayish-blue);
+  font-size: 13px;
+  font-weight: 400;
+  transition: 0.2s ease-in;
+}
+.nav-link > a:hover {
+  color: var(--color-soft-orange);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
