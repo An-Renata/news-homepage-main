@@ -18,8 +18,10 @@ body {
   margin: 0 auto;
   background-color: var(--color--off-white);
 }
+
 /* NAVIGATION */
 .nav-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,6 +40,35 @@ body {
 }
 .nav-link > a:hover {
   color: var(--color-soft-orange);
+}
+/* HAMBURGER MENU */
+.hamburger-menu {
+  height: 25px;
+  width: 35px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2px;
+  transition: all 0.4s ease;
+}
+.hamburger-menu > .bar {
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--color-very-dark-blue);
+  transition: all 0.4s;
+}
+.hamburger-menu.open .bar2 {
+  transform: translateX(-35px);
+  background: transparent;
+}
+.hamburger-menu.open .bar1 {
+  transform: rotate(45deg) translate(5px, 0);
+}
+.hamburger-menu.open .bar3 {
+  transform: rotate(-45deg) translate(15px, -10px);
 }
 
 /* MAIN CONTENT */
@@ -102,8 +133,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
-/* .article-body {
-} */
+
 .article-item {
   border-bottom: 1px solid var(--color-dark-grayish-blue);
   padding-bottom: 10px;
@@ -167,9 +197,82 @@ body {
   color: var(--color-dark-grayish-blue);
 }
 .attribution {
+  margin-top: 30px;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1170px) {
+  body {
+    padding: 50px 50px;
+  }
+  .top-article {
+    gap: 15px;
+  }
+}
+@media (max-width: 1000px) {
+  .top-article {
+    gap: 10px;
+  }
+  .article-number {
+    font-size: 20px;
+  }
+  .heading-4 {
+    font-size: 14px;
+  }
+  .top-article-description {
+    font-size: 12px;
+  }
+  .heading-2 {
+    font-size: 20px;
+  }
+  .article-heading {
+    font-size: 16px;
+  }
+  .article-about {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 880px) {
+  .hamburger-menu {
+    display: flex;
+    z-index: 2;
+  }
+  body {
+    padding: 20px 20px;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding-left: 30px;
+    position: fixed;
+    background-color: var(--color--off-white);
+    z-index: 1;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100vh;
+    transition: 0.4s ease;
+  }
+  .nav-links.active {
+    right: 0;
+  }
+  .main-heading {
+    grid-column: 1 / 4;
+  }
+  .article-body {
+    grid-column: 1 / 4;
+  }
+  .heading-4 {
+    font-size: 11px;
+  }
+  .top-article-description {
+    font-size: 9px;
+  }
 }
