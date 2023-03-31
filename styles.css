@@ -4,7 +4,7 @@
   --color--off-white: hsl(36, 100%, 99%);
   --color-grayish-blue: hsl(233, 8%, 79%);
   --color-dark-grayish-blue: hsl(236, 13%, 42%);
-  --color-very-dar-blue: hsl(240, 100%, 5%);
+  --color-very-dark-blue: hsl(240, 100%, 5%);
 }
 body {
   font-family: "Inter", sans-serif;
@@ -21,12 +21,12 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 25px;
+  gap: 50px;
 }
 .nav-link > a {
   text-decoration: none;
-  color: var(--color-dar-grayish-blue);
-  font-size: 13px;
+  color: var(--color-dark-grayish-blue);
+  font-size: 16px;
   font-weight: 400;
   transition: 0.2s ease-in;
 }
@@ -38,7 +38,7 @@ body {
 .content-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 60px;
+  grid-gap: 35px;
   margin-top: 50px;
 }
 .main-heading {
@@ -46,6 +46,7 @@ body {
 }
 .main-article-header {
   display: grid;
+  padding: 20px 20px 0 0;
   grid-template-columns: 1fr 1fr;
 }
 .main-article-header > h1 {
@@ -53,30 +54,73 @@ body {
   font-weight: 800;
 }
 .about {
-  /* display: grid;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding: 20px 20px;
   line-height: 1.5;
+  padding-top: 20px;
   font-weight: 400;
 }
 .about p {
-  font-size: 16px;
+  font-size: 19px;
   color: var(--color-dark-grayish-blue);
-  margin-bottom: 40px;
 }
 .btn-read-more {
   text-decoration: none;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  padding: 20px 30px;
   text-transform: uppercase;
   color: var(--color--off-white);
   background-color: var(--color-soft-red);
+  transition: 0.2s ease;
+}
+.btn-read-more:hover {
+  background-color: var(--color-very-dark-blue);
 }
 .main-image {
   width: 100%;
 }
 .top-article-img {
   width: 50%;
+}
+/* ASIDE CONTAINER */
+.articles-aside {
+  background-color: var(--color-very-dark-blue);
+  color: var(--color--off-white);
+  padding: 0 20px;
+}
+.article-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.article-item {
+  border-bottom: 1px solid var(--color-dark-grayish-blue);
+  padding-bottom: 20px;
+}
+.article-item:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+.heading-2 {
+  font-size: 40px;
+  color: var(--color-soft-orange);
+}
+.article-heading {
+  font-size: 25px;
+  line-height: 1.5;
+  transition: 0.2s ease;
+}
+.article-heading:hover {
+  color: var(--color-soft-orange);
+  cursor: pointer;
+}
+.article-about {
+  font-weight: 400;
+  line-height: 2;
+  font-size: 17px;
+  color: var(--color-grayish-blue);
 }
 .attribution {
   font-size: 11px;
