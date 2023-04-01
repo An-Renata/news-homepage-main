@@ -70,7 +70,20 @@ body {
 .hamburger-menu.open .bar3 {
   transform: rotate(-45deg) translate(15px, -10px);
 }
-
+.overlay {
+  opacity: 0;
+  background: rgb(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  height: 100vh;
+  transition: 0.3s ease;
+}
+.overlay.faded {
+  opacity: 1;
+}
 /* MAIN CONTENT */
 .content-container {
   display: grid;
@@ -261,9 +274,9 @@ body {
     height: 100vh;
     transition: 0.4s ease;
   }
+
   .nav-links.active {
     right: 0;
-    box-shadow: 0 4px 20px #978e8e;
   }
   .main-heading {
     grid-column: 1 / 4;
